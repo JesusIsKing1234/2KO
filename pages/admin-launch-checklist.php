@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/includes/layout.php';
+require_once __DIR__ . '/../includes/layout.php';
 render_head('Launch Checklist | Hidden Admin', 'Pre-launch QA, SEO, compression, and checkout test checklist.');
 render_header('');
 ?>

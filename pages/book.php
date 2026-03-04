@@ -1,7 +1,7 @@
 <?php
-require_once __DIR__ . '/includes/layout.php';
+require_once __DIR__ . '/../includes/layout.php';
 render_head('Book | Artist Album Hub', 'Booking inquiry for churches, conferences, and worship events.');
-render_header('book.php');
+render_header('/book');
 ?>
 <main id="main" class="section">
   <div class="container split-2">

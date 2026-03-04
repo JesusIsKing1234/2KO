@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/includes/layout.php';
+require_once __DIR__ . '/../includes/layout.php';
 render_head('Privacy Policy | Artist Album Hub', 'Privacy policy placeholder for mailing list and checkout flows.');
 render_header('');
 ?>

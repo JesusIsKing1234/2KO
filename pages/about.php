@@ -1,7 +1,7 @@
 <?php
-require_once __DIR__ . '/includes/layout.php';
+require_once __DIR__ . '/../includes/layout.php';
 render_head('About / Ministry | Artist Album Hub', 'Bio, mission, testimony, and ministry context.');
-render_header('about.php');
+render_header('/about');
 ?>
 <main id="main" class="section">
   <div class="container split-2">

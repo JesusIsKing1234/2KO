@@ -1,7 +1,7 @@
 <?php
-require_once __DIR__ . '/includes/layout.php';
+require_once __DIR__ . '/../includes/layout.php';
 render_head('EPK | Artist Album Hub', 'Press kit with photos, bio, videos, and contact details.');
-render_header('epk.php');
+render_header('/epk');
 ?>
 <main id="main" class="section">
   <div class="container split-2">
@@ -10,8 +10,8 @@ render_header('epk.php');
       <h1>EPK</h1>
       <p>PLACEHOLDER: short approved bio for press and collaborators.</p>
       <div class="cta-row">
-        <a class="btn" href="videos.php">Video links</a>
-        <a class="btn" href="about.php">Long bio</a>
+        <a class="btn" href="/videos">Video links</a>
+        <a class="btn" href="/about">Long bio</a>
       </div>
     </article>
     <article class="card">

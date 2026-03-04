@@ -1,10 +1,10 @@
 <?php
-require_once __DIR__ . '/includes/layout.php';
+require_once __DIR__ . '/../includes/layout.php';
 
 $release = $releases[0];
 $album_tracks = array_values(array_filter($tracks, static fn($t) => $t['release_slug'] === $release['slug']));
 render_head('Album | Artist Album Hub', 'Album story, previews, editions, and direct checkout for global and South African buyers.');
-render_header('album.php');
+render_header('/album');
 ?>
 <main id="main">
     <section class="hero">
@@ -15,8 +15,8 @@ render_header('album.php');
                 <p><?php echo htmlspecialchars($release['short']); ?></p>
                 <p><strong>Released:</strong> <?php echo htmlspecialchars($release['release_date']); ?></p>
                 <div class="cta-row">
-                    <a class="btn btn-dark" href="shop.php">Buy now</a>
-                    <a class="btn" href="listen.php">Listen previews</a>
+                    <a class="btn btn-dark" href="/shop">Buy now</a>
+                    <a class="btn" href="/listen">Listen previews</a>
                     <a class="btn" href="#join-list">Join list</a>
                 </div>
             </div>
@@ -75,7 +75,7 @@ render_header('album.php');
                         <div class="cta-row">
                             <a class="btn" href="<?php echo htmlspecialchars($product['paypal_url']); ?>">PayPal (Global)</a>
                             <a class="btn" href="<?php echo htmlspecialchars($product['payfast_url']); ?>">PayFast (SA)</a>
-                            <a class="btn btn-dark" href="thank-you.php?product=<?php echo urlencode(strtolower(str_replace(' ', '-', $product['name']))); ?>">View success page</a>
+                            <a class="btn btn-dark" href="/thank-you?product=<?php echo urlencode(strtolower(str_replace(' ', '-', $product['name']))); ?>">View success page</a>
                         </div>
                     </article>
                 <?php endforeach; ?>
@@ -98,7 +98,7 @@ render_header('album.php');
                     <label for="join-email">Email address</label>
                     <input id="join-email" name="fields[email]" type="email" required>
                     <button class="btn btn-brand" type="submit">Join the list</button>
-                    <p>Consent + privacy: <a href="privacy.php">Privacy Policy</a>.</p>
+                    <p>Consent + privacy: <a href="/privacy">Privacy Policy</a>.</p>
                 </form>
             </article>
         </div>

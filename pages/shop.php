@@ -1,7 +1,7 @@
 <?php
-require_once __DIR__ . '/includes/layout.php';
+require_once __DIR__ . '/../includes/layout.php';
 render_head('Shop / Support | Artist Album Hub', 'Buy the album directly or support with PayPal/PayFast.');
-render_header('shop.php');
+render_header('/shop');
 ?>
 <main id="main" class="section">
   <div class="container">
@@ -18,7 +18,7 @@ render_header('shop.php');
         <div class="cta-row">
           <a class="btn" href="<?php echo htmlspecialchars($product['paypal_url']); ?>">PayPal (Global)</a>
           <a class="btn" href="<?php echo htmlspecialchars($product['payfast_url']); ?>">PayFast (SA)</a>
-          <a class="btn btn-dark" href="thank-you.php?product=<?php echo urlencode(strtolower(str_replace(' ', '-', $product['name']))); ?>">Success instructions</a>
+          <a class="btn btn-dark" href="/thank-you?product=<?php echo urlencode(strtolower(str_replace(' ', '-', $product['name']))); ?>">Success instructions</a>
         </div>
       </article>
       <?php endforeach; ?>
@@ -30,7 +30,7 @@ render_header('shop.php');
           <label for="shop-email">Email</label>
           <input id="shop-email" name="fields[email]" type="email" required>
           <button class="btn btn-brand" type="submit">Join</button>
-          <p>Consent line: by subscribing you agree to our <a href="privacy.php">Privacy Policy</a>.</p>
+          <p>Consent line: by subscribing you agree to our <a href="/privacy">Privacy Policy</a>.</p>
         </form>
       </article>
     </section>

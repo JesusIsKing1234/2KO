@@ -1,7 +1,7 @@
 <?php
-require_once __DIR__ . '/includes/layout.php';
+require_once __DIR__ . '/../includes/layout.php';
 render_head('Videos | Artist Album Hub', 'Live worship, acoustic sessions, and song stories.');
-render_header('videos.php');
+render_header('/videos');
 ?>
 <main id="main" class="section">
   <div class="container">

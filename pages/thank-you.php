@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/includes/layout.php';
+require_once __DIR__ . '/../includes/layout.php';
 $product = isset($_GET['product']) ? trim($_GET['product']) : 'your purchase';
 render_head('Thank You | Artist Album Hub', 'Purchase success instructions and download delivery expectations.');
 render_header('');
@@ -26,8 +26,8 @@ render_header('');
       <h2>Automation-ready notes</h2>
       <p>PLACEHOLDER: Wire PayPal IPN / PayFast ITN to Make/Zapier webhook, then dispatch secure download URL.</p>
       <div class="cta-row">
-        <a class="btn" href="listen.php">Keep listening</a>
-        <a class="btn btn-dark" href="index.php#join-list">Join mailing list</a>
+        <a class="btn" href="/listen">Keep listening</a>
+        <a class="btn btn-dark" href="/#join-list">Join mailing list</a>
       </div>
     </article>
   </div>

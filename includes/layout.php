@@ -18,7 +18,7 @@ function render_head(string $title, string $description, string $canonical = '')
     <meta property="og:type" content="website">
     <meta property="og:image" content="<?php echo htmlspecialchars($site['og_default']); ?>">
     <link rel="canonical" href="<?php echo htmlspecialchars($canon); ?>">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -29,20 +29,20 @@ function render_header(string $current = ''): void
 {
     global $site;
     $nav = [
-        'Home' => 'index.php',
-        'Album' => 'album.php',
-        'Listen' => 'listen.php',
-        'Shop/Support' => 'shop.php',
-        'Videos' => 'videos.php',
-        'About' => 'about.php',
-        'Book' => 'book.php',
-        'EPK' => 'epk.php',
-        'Link in Bio' => 'link-in-bio.php',
+        'Home' => '/',
+        'Album' => '/album',
+        'Listen' => '/listen',
+        'Shop/Support' => '/shop',
+        'Videos' => '/videos',
+        'About' => '/about',
+        'Book' => '/book',
+        'EPK' => '/epk',
+        'Link in Bio' => '/link-in-bio',
     ];
     ?>
 <header class="site-header">
     <div class="container nav-wrap">
-        <a class="brand" href="index.php"><?php echo htmlspecialchars($site['name']); ?></a>
+        <a class="brand" href="/"><?php echo htmlspecialchars($site['name']); ?></a>
         <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
         <nav id="site-nav" aria-label="Primary">
             <ul>
@@ -51,7 +51,7 @@ function render_header(string $current = ''): void
                 <?php endforeach; ?>
             </ul>
         </nav>
-        <a class="btn btn-dark" href="shop.php">Buy</a>
+        <a class="btn btn-dark" href="/shop">Buy</a>
     </div>
 </header>
 <?php
@@ -61,9 +61,9 @@ function render_mobile_cta(): void
 {
     ?>
 <div class="mobile-cta" aria-label="Quick actions">
-    <a href="listen.php">Listen</a>
-    <a href="shop.php">Buy</a>
-    <a href="index.php#join-list">Join</a>
+    <a href="/listen">Listen</a>
+    <a href="/shop">Buy</a>
+    <a href="/#join-list">Join</a>
 </div>
 <?php
 }
@@ -80,24 +80,24 @@ function render_footer(): void
         </div>
         <div>
             <h4>Explore</h4>
-            <a href="album.php">Album</a>
-            <a href="listen.php">Listen</a>
-            <a href="videos.php">Videos</a>
-            <a href="book.php">Book</a>
+            <a href="/album">Album</a>
+            <a href="/listen">Listen</a>
+            <a href="/videos">Videos</a>
+            <a href="/book">Book</a>
         </div>
         <div>
             <h4>Legal</h4>
-            <a href="privacy.php">Privacy Policy</a>
-            <a href="terms.php">Terms</a>
+            <a href="/privacy">Privacy Policy</a>
+            <a href="/terms">Terms</a>
         </div>
         <div>
             <h4>Support</h4>
             <p><a href="mailto:<?php echo htmlspecialchars($site['support_email']); ?>"><?php echo htmlspecialchars($site['support_email']); ?></a></p>
-            <p><a href="thank-you.php?product=album">Purchase success page</a></p>
+            <p><a href="/thank-you?product=album">Purchase success page</a></p>
         </div>
     </div>
 </footer>
-<script src="assets/js/main.js"></script>
+<script src="/assets/js/main.js"></script>
 </body>
 </html>
 <?php

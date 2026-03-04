@@ -1,7 +1,7 @@
 <?php
-require_once __DIR__ . '/includes/layout.php';
+require_once __DIR__ . '/../includes/layout.php';
 render_head('Listen | Artist Album Hub', 'All tracks and singles with preview-first listening and strong buy CTA.');
-render_header('listen.php');
+render_header('/listen');
 ?>
 <main id="main" class="section">
   <div class="container">
@@ -16,8 +16,8 @@ render_header('listen.php');
         <div class="audio-placeholder">Preview player placeholder (30-60 sec)</div>
         <?php if (!empty($track['full'])): ?><span class="badge">Full single available</span><?php endif; ?>
         <div class="cta-row">
-          <a class="btn" href="shop.php">Buy album</a>
-          <a class="btn" href="album.php">Album story</a>
+          <a class="btn" href="/shop">Buy album</a>
+          <a class="btn" href="/album">Album story</a>
         </div>
       </article>
       <?php endforeach; ?>

@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/includes/layout.php';
+require_once __DIR__ . '/../includes/layout.php';
 render_head('Terms | Artist Album Hub', 'Terms and download policy placeholder.');
 render_header('');
 ?>

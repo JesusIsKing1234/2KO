@@ -10,7 +10,7 @@ $site = [
     'payfast_album_url' => 'https://www.payfast.co.za/eng/process?merchant_id=10000100&merchant_key=46f0cd694581a',
     'paypal_support_url' => 'https://www.paypal.com/donate/?hosted_button_id=PLACEHOLDER',
     'payfast_support_url' => 'https://www.payfast.co.za/eng/process?merchant_id=10000100&merchant_key=46f0cd694581a&amount=',
-    'og_default' => 'assets/images/og-default.jpg',
+    'og_default' => '/assets/images/og-default.jpg',
 ];
 
 $releases = [
