@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-$path = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH);
-$path = rtrim((string)$path, '/');
+$rawPath = isset($_GET['path']) ? '/' . ltrim((string)$_GET['path'], '/') : (string)parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH);
+$path = rtrim($rawPath, '/');
 $path = $path === '' ? '/' : $path;
 
 $routes = [
